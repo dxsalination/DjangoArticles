@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    
+</head>
+<body>
+    <aside>
+        <h1 class="navigate">Navigation</h1>
+        <nav>
+            <ul>
+                <a href="{% url 'home' %}" class="home"><li>
+                    home
+                    <span></span><span></span><span></span><span></span>
+                </li></a>
+                <a href="{% url 'about' %}" class="about"><li>
+                    About us
+                    <span></span><span></span><span></span><span></span>
+                </li></a>
+                <a href="{% url 'news_home' %}" class="news_home"><li>
+                    Articles
+                    <span></span><span></span><span></span><span></span>
+                </li></a>
+                <a href="{% url 'news_create' %}" class="news_create"><li>
+                    Add article
+                    <span></span><span></span><span></span><span></span>
+                </li></a>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        {% block content %}      
+        {% endblock %}
+    </main>
+
+   
+</body>
+</html>

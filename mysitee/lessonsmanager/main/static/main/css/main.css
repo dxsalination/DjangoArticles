@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*background-color: #2c2c2c;*/
+    background-color: #14161f;
+    color: #b3b7bd;
+}
+
+aside{
+    float: left;
+    background-color: #14151c;
+    width: 22%;
+    padding: 3%;
+    height: 100vh;
+    color: #b3b7bd;
+    border-right: 10px solid #12131a;
+}
+
+
+aside .navigate{
+    margin-top: 25px;
+    font-size: 42px;
+    cursor: default;
+}
+
+aside ul{list-style: none;}
+aside ul li{
+    justify-content: space-around;
+    color:white;
+    display: block;
+    margin-top: 20px;
+    transition: transform .3s ease;
+    text-decoration: none;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.10);
+
+}
+
+main .features{
+    float: left;
+    color: #b3b7bd;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+main .features h1 {font-size: 50px;}
+main .features p {max-width: 400px; margin: 20px auto}
+
+
+.alert-dark {
+    width: 650px;
+    clear: both;
+    margin: 15px 22.0%;
+    float: left;
+}
+
+form{
+    margin-left: 32%;
+    margin: 15px 27%;
+    width: 500px;
+    margin-top: 60px;
+}
+
+
+.news_create{
+    margin-top: 50px;
+    font-size: 45px;
+    text-decoration: none;
+}
+
+.home{
+    text-decoration: none;
+}
+
+.about{
+    text-decoration: none;
+}
+
+.news_home{
+    text-decoration: none;
+}
+
+
+.span_error{
+    font-size: 25px;
+    color: #b3b7bd;
+    background-color: #211e1e;
+    width: 500px;
+    margin: 15px 0%;
+    border-radius: 8px
+    
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    --c: #131e51;
+    color: var(--c);
+    font-size: 13px;
+    border: 0.2em solid var(--c);
+    border-radius: 0.5em;
+    width: 10em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 3em;
+}
+
+nav ul li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+nav ul li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+nav ul li:hover span {
+    transform: translateY(0) scale(2);
+}
+
+nav ul li span:nth-child(1) {
+    --n: 1;
+}
+
+nav ul li span:nth-child(2) {
+    --n: 2;
+}
+
+nav ul li span:nth-child(3) {
+    --n: 3;
+}
+
+nav ul li span:nth-child(4) {
+    --n: 4;
+}
+
+
+.typing.animate {
+    margin-top: 200px;
+    width: 21ch;
+    border-right: 0.1em solid white;
+    font-family: monospace;
+    font-size: 3em;
+    animation: type 2.5s steps(21), writer 2s infinite alternate, delete 0.5s steps(5) 2.5s,
+        type2 1s steps(4) 3s forwards, type3 3s steps(22, end) 6s forwards;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #b3b7bd;
+}
+
+.typing.animate::before {
+    content: "Welcome! Dear Guest. ";
+    animation: type2 1s steps(4) 3s forwards, type3 3s steps(22, end) 6s forwards;
+}
+
+@keyframes type {
+    from {
+        width: 0;
+    }
+    to {
+        width: 21ch;
+    }
+}
+
+@keyframes type2 {
+    from {
+        width: 16ch;
+        content: "Welcome! Dear Guest. ";
+    }
+    to {
+        width: 21ch;
+        content: "Welcome! Dear Guest. ";
+    }
+}
+
+@keyframes type3 {
+    from {
+        width: 21ch;
+        content: "Welcome! Dear Guest. It's interesting here!";
+    }
+    to {
+        width: 45ch;
+        content: "Welcome! Dear Guest. It's interesting here!";
+    }
+}
+
+@keyframes writer {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes delete {
+    from {
+        width: 21ch;
+    }
+    to {
+        width: 16ch;
+    }
+}
